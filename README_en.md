@@ -1,7 +1,35 @@
 ## Introduction
 PaddleOCR aims to create multilingual, awesome, leading, and practical OCR tools that help users train better models and apply them into practice.
 
-### Training the Recognizer part with Custom Dataset:
+# Training the Recognizer part with Custom Dataset:
+## Env setup:
+```python
+conda install python=3.8
+```
+paddlepaddle install:
+I. if you are usinf GPU:
+```python
+conda install paddlepaddle-gpu==2.6.1 cudatoolkit=11.6 -c https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/Paddle/ -c conda-forge
+```
+II. if you are using CPU:
+```python
+conda install paddlepaddle==2.6.1 --channel https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/Paddle/
+```
+check paddle installed properly:
+```python	
+ python
+>>import paddle
+>>paddle.utils.run_check()
+>>import paddle.distributed as dist
+>>print(dist.ParallelEnv().dev_id)
+```
+```python
+conda install anaconda::yaml
+```
+Install library dependencies using,
+```python
+pip install -r requirements.txt
+```
 ## Dataset Preperation:
 1. Dataset used: [Indian Vechile License Plate](https://www.kaggle.com/datasets/saisirishan/indian-vehicle-dataset) ==> contains images with corresponding yml file.
 2. First thing first, I accumulated all the images into same folder "dataset/"
