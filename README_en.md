@@ -61,6 +61,8 @@ tar -xf en_PP-OCRv3_rec_train.tar && rm -rf en_PP-OCRv3_rec_train.tar
 ```
 ## Configure your YAML file
 You can change parameters like number of epochs, learning rate, GPU specification, the number of epochs after which the model state is saved, etc. You will also have to provide the path to your train data and train labels under the train section, Similarly, provide the path to the validation data and labels in the evaluation section. Do not touch any of the part of architecture of the model. Let’s look at all the lines you will have to change in this file in order for you to run the training script.
+![git2](https://github.com/user-attachments/assets/b1ec4ab2-829c-4e67-b7a8-767f1ffa68c5)
+
 
 
 ## Fine Tuning the Model
