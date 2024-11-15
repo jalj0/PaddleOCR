@@ -7,11 +7,11 @@ PaddleOCR aims to create multilingual, awesome, leading, and practical OCR tools
 conda install python=3.8
 ```
 paddlepaddle install:
-I. if you are usinf GPU:
+a) if you are usinf GPU:
 ```python
 conda install paddlepaddle-gpu==2.6.1 cudatoolkit=11.6 -c https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/Paddle/ -c conda-forge
 ```
-II. if you are using CPU:
+b) if you are using CPU:
 ```python
 conda install paddlepaddle==2.6.1 --channel https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/Paddle/
 ```
@@ -45,6 +45,7 @@ python create_path_label_csv.py
 ```python
 python gen_label.py --mode="rec" --input_path={path to csv file} --output_label=(folder to output txt.file}
 ```
+![git1](https://github.com/user-attachments/assets/d3e228c4-1405-4cd9-8173-c1342cbb974a)
 Upto here you have created the dataset required for PaddleOCR training of Recognition part with Custom dataset.
 
 ## Download the pre-trained weights
