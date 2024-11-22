@@ -39,7 +39,7 @@ pip install -r requirements.txt
 python split_train_test_val.py
 ```
 4. After spliting the dataset, create txt file where first column contains the filename(with path) and 2nd column contains the (key,value) type of pairs: follow create_anno_dec.py. For the Detector we need to create two .txt files for training and validation respectively with the format as follows:<br/>
-image_path\t[{“points”:[[xmin, ymin], [xmax, ymin], [xmax, ymax], [xmin, ymax]], “transcription”:text_annotation}, {“points”:…..}]\n
+image_path\t[{“points”:[[xmin, ymin], [xmax, ymin], [xmax, ymax], [xmin, ymax]], “transcription”:text_annotation}, {“points”:…..}]\n<br/>
 ![d2](https://github.com/user-attachments/assets/d8c8f5a0-ea3c-411e-a110-6617eead70ee)
 5. Repeat 4 for test & val set also.
 Upto here you have created the dataset required for PaddleOCR training of Detection part with Custom dataset.
@@ -57,9 +57,9 @@ wget -P ./pretrain_models/ https://paddleocr.bj.bcebos.com/pretrained/MobileNetV
 You can download any other pretrained model but remember to choose the correct config file for training.
 
 #### 1.4 Configure your YML file
-For my project i choose "MobileNetV3_large_x0_5_pretrained" model with [Differential Binarization](https://arxiv.org/pdf/1911.08947) algorithm. Therefore corresponding .yml has to be choosen i.e., "det_mv3_db.yml".
-You will find the required config file at "configs/dec/det_mv3_db.yml".
-You can change parameters like number of epochs, learning rate, GPU specification, the number of epochs after which the model state is saved, etc. You will also have to provide the path to your train data and train labels under the train section, Similarly, provide the path to the validation data and labels in the evaluation section. Do not touch any of the part of architecture of the model. Let’s look at all the lines you will have to change in this file in order for you to run the training script.
+For my project i choose "MobileNetV3_large_x0_5_pretrained" model with [Differential Binarization](https://arxiv.org/pdf/1911.08947) algorithm. Therefore corresponding .yml has to be choosen i.e., "det_mv3_db.yml".<br/>
+You will find the required config file at "configs/dec/det_mv3_db.yml".<br/>
+You can change parameters like number of epochs, learning rate, GPU specification, the number of epochs after which the model state is saved, etc. You will also have to provide the path to your train data and train labels under the train section, Similarly, provide the path to the validation data and labels in the evaluation section. Do not touch any of the part of architecture of the model. Let’s look at all the lines you will have to change in this file in order for you to run the training script.<br/>
 ![dec4](https://github.com/user-attachments/assets/df506190-6974-460f-929a-1e303c437dba)
 
 
@@ -90,7 +90,7 @@ Now you should have a new folder (at the path you provided), with the .pdi files
 No need to setup another env. You can work in same env created in detection part.
 
 #### 2.2 Dataset Preparation:
-1,2,3 steps are same as in detection part. Follow from step 4.
+1,2,3 steps are same as in detection part. Follow from step 4.<br/>
 4. After spliting the dataset, create csv file where first column contains the filename(with path) and 2nd column contains the label(license number): follow create_path_label_csv.py
 ```python
 python create_path_label_csv.py
@@ -109,7 +109,7 @@ wget -P ./pretrain_models/ https://paddleocr.bj.bcebos.com/PP-OCRv3/english/en_P
 tar -xf en_PP-OCRv3_rec_train.tar && rm -rf en_PP-OCRv3_rec_train.tar
 ```
 #### 2.4 Configure your YAML file
-You can change parameters like number of epochs, learning rate, GPU specification, the number of epochs after which the model state is saved, etc. You will also have to provide the path to your train data and train labels under the train section, Similarly, provide the path to the validation data and labels in the evaluation section. Do not touch any of the part of architecture of the model. Let’s look at all the lines you will have to change in this file in order for you to run the training script.
+You can change parameters like number of epochs, learning rate, GPU specification, the number of epochs after which the model state is saved, etc. You will also have to provide the path to your train data and train labels under the train section, Similarly, provide the path to the validation data and labels in the evaluation section. Do not touch any of the part of architecture of the model. Let’s look at all the lines you will have to change in this file in order for you to run the training script.<br/>
 ![git2](https://github.com/user-attachments/assets/b1ec4ab2-829c-4e67-b7a8-767f1ffa68c5)
 
 #### 2.5 Fine Tuning the Model
