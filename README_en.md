@@ -31,7 +31,7 @@ Install library dependencies using,
 ```python
 pip install -r requirements.txt
 ```
-#### 1.2 Dataset Preperation:
+#### 1.2 Dataset Preparation:
 1. Dataset used: [Indian Vechile License Plate](https://www.kaggle.com/datasets/saisirishan/indian-vehicle-dataset) ==> contains images with corresponding yml file.
 2. First thing first, I accumulated all the images into same folder "dataset/"
 3. Using simple python code we can split the dataset into train, test and validation; follow split_train_test_val.py
@@ -89,7 +89,7 @@ Now you should have a new folder (at the path you provided), with the .pdi files
 #### 2.1 Env setup:
 No need to setup another env. You can work in same env created in detection part.
 
-#### 2.2 Dataset Preperation:
+#### 2.2 Dataset Preparation:
 1,2,3 steps are same as in detection part. Follow from step 4.
 4. After spliting the dataset, create csv file where first column contains the filename(with path) and 2nd column contains the label(license number): follow create_path_label_csv.py
 ```python
